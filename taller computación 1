@@ -3,6 +3,13 @@ def validate_dna (dna_seq):
   valid = seqm.count("A") + seqm.count("C") + seqm.count("G") + seqm.count("T")
   if valid == len (seqm): return True
   else : print ("Error")
+def find_x (dna_seq):
+  uppercase= dna_seq.upper()
+  hasx = uppercase.find('X')
+  if hasx > 0 : return True
+  else : print ("DNA Sequence doesn't contain the X gene")
 seq_aa = input ("DNA Sequence: ")
 if validate_dna (seq_aa) : print ("Sequence", str(seq_aa).upper(), "is Human.")
 else : print ("Sequence", str(seq_aa).upper(), "is Mutant.")
+if find_x (seq_aa) : print ("Sequence", str(seq_aa).upper(), "contains the X gene.")
+else : print ("")
