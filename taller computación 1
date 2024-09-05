@@ -1,0 +1,8 @@
+def validate_dna (dna_seq):
+  seqm = dna_seq.upper()
+  valid = seqm.count("A") + seqm.count("C") + seqm.count("G") + seqm.count("T")
+  if valid == len (seqm): return True
+  else : print ("Error")
+seq_aa = input ("DNA Sequence: ")
+if validate_dna (seq_aa) : print ("Sequence", str(seq_aa).upper(), "is Human.")
+else : print ("Sequence", str(seq_aa).upper(), "is Mutant.")
