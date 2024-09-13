@@ -1,0 +1,20 @@
+# Se definen los diferentes funciones del programa, una para comparar ambas cadenas de ADN, y una para verificar que sean cadenas válidas
+def compare_dna (sequence):
+    if seq_aa == seq_bb: return True
+    else : return False
+seq_aa = input ("Original DNA Sequence: ")
+def validate_dna (dna_seq):
+  seqm = dna_seq.upper()
+  valid = seqm.count("A") + seqm.count("C") + seqm.count("G") + seqm.count("T")
+  if valid == len (seqm): return True
+  else : print ("")
+# Se asigna un valor vacío a la segunda cadena hasta que el programa determine que la primera es válida
+seq_bb = "n/a"
+# Se valida la primera cadena para que el usuario inserte una segunda
+if validate_dna (seq_aa) : seq_bb = input ("Second DNA Sequence: ")
+else : print ("Please input a valid DNA sequence.")
+# Si ambas cadenas son válidas e iguales, se confirma la ausencia de una mutación
+if validate_dna (seq_bb) == False : print("Please input a valid DNA sequence.")
+if compare_dna (seq_bb) and seq_bb != "n/a" and validate_dna (seq_bb) : print ("Sequences match: No mutation present")
+# Si ambas cadenas son válidas pero no son iguales, significa que hay una mutación presente
+else : print ("Sequences do not match: Mutation Present")
